@@ -1,0 +1,37 @@
+.toggle {
+  @include button-reset;
+  position: relative;
+  width: 48px;
+  height: 10px;
+
+  @media (max-width: $mobile-width) {
+    width: 38px;
+  }
+
+  // Кнопка при закрытом состоянии меню
+  &--closed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      width: 48px;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, 50%);
+      background-color: $basic-white;
+      box-shadow: 0 8px 0 0  $basic-white;
+
+      @media (max-width: $mobile-width) {
+        width: 38px;
+      }
+    }
+  }
+
+  &:focus {
+    outline: 2px solid  $basic-white;
+  }
+}

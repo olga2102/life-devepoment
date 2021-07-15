@@ -1,0 +1,30 @@
+.page__body {
+  font-family: "Core Sans C", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: $basic-white;
+  min-width: 320px;
+  min-height: 100vh;
+  align-content: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+
+  margin: 0;
+}
+
+.page__background {
+  background-image: url("../img/people.jpg");
+  width: 100%;
+  min-height: 968px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/skyscrapers.jpg");
+    background-size: inherit;
+    background-position-x: 40%;
+    min-height: 615px;
+  }
+}
