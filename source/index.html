@@ -17,51 +17,163 @@
   <div class="page__background">
     <header class="header">
       <div class="container">
-      <div class="header__wrapper">
-      <a class="header__logo logo">
-        <img class="logo__img" src="img/logo.svg" width="159" height="47" alt="Логотип организации по продаже квартир">
-      </a>
-      <div class="header__inner">
-      <div class="header__contacts">
-        <a class="header__link contacts" href="tel:+78002223790">
-          <svg class="contacts__svg" width="36" height="36">
-            <use xlink:href="img/sprite.svg#phone"></use>
-          </svg>
-          <p class="contacts__number">8 800 222-37-90</p>
-        </a>
-        <p class="contacts__text">Работаем ежедневно с 10:00 до 20:00</p>
+        <div class="header__wrapper">
+          <a class="header__logo logo">
+            <img class="logo__img" src="img/logo.svg" width="159" height="47"
+              alt="Логотип организации по продаже квартир">
+          </a>
+          <div class="header__inner">
+            <div class="header__contacts">
+              <a class="header__link contacts" href="tel:+78002223790">
+                <svg class="contacts__svg" width="36" height="36">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                <p class="contacts__number">8 800 222-37-90</p>
+              </a>
+              <p class="contacts__text">Работаем ежедневно с 10:00 до 20:00</p>
+            </div>
+            <nav class="header__nav nav nav--open">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">
+                    Квартиры
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">
+                    Ипотека
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">
+                    Коммерция
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">
+                    Управляющая компания
+                  </a>
+                </li>
+              </ul>
+              <button class="toggle toggle--closed" type="button" aria-label="Переключение меню"></button>
+            </nav>
+          </div>
+        </div>
       </div>
-      <nav class="header__nav nav nav--open">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Квартиры
+    </header>
+    <main>
+      <div class="container">
+      <h1 class="visually-hidden">Продажа квартир от застройщика Live devepoment</h1>
+      <div class="bank">
+      <a class="bank__logo">
+        <img class="bank__img" href="#" src="img/logo-bank.png" width="194" height="55"
+          alt="Логотип банка, финансирующего строительство">
+      </a>
+    </div>
+      <section class="types">
+        <h2 class="visually-hidden" href="#">Жилые комплексы</h2>
+        <ul class="types__list">
+          <li class="types__item">
+            <a class="types__link" href="#">Северный парк</a>
+          </li>
+          <li class="types__item">
+            <a class="types__link" href="#">Станция Столичная</a>
+          </li>
+          <li class="types__item">
+            <a class="types__link" href="#">Лето</a>
+          </li>
+          <li class="types__item">
+            <a class="types__link" href="#">Сказочный сад</a>
+          </li>
+          <li class="types__item">
+            <a class="types__link" href="#">Краски</a>
+          </li>
+          <li class="types__item">
+            <a class="types__link" href="#">Ренесанс</a>
+          </li>
+          <li class="types__item">
+            <a class="types__link" href="#">Компасс сити</a>
+          </li>
+          <li class="types__item">
+            <a class="types__link" href="#">Бруклин</a>
+          </li>
+          <li class="types__item">
+            <a class="types__link" href="#">Монблан</a>
+          </li>
+        </ul>
+      </section>
+      <section class="description">
+        <h2 class="visually-hidden">Описание жилых комплексов</h2>
+        <ul class="description__list">
+          <li class="description__item description__item--current">
+            <picture>
+              <!-- <source type="image/webp" srcset="img/house.webp 1x, img/house@2x.webp 2x"> -->
+              <!-- 1х: 373px/231px; 2x: 746px/462px -->
+              <img class="description__img" src="img/house.png" srcset="img/house@2x.png 2x" width="373" height="231"
+                alt="Высотные дома, окруженные зеленной территорией">
+            </picture>
+            <h3 class="description__title">Северный парк</h3>
+            <p class="description__text">Жилой комплекс небывалого масштаба с развитой инфраструктурой</p>
+          </li>
+          <li class="description__item">
+            <picture>
+              <!-- <source type="image/webp" srcset="img/house.webp 1x, img/house@2x.webp 2x"> -->
+              <!-- 1х: 373px/231px; 2x: 746px/462px -->
+              <img src="img/house.png" srcset="img/house@2x.png 2x" width="373" height="231"
+                alt="Высотные дома, окруженные зеленной территорией">
+            </picture>
+            <h3 class="description__title">Северный парк</h3>
+            <p class="description__text">Жилой комплекс небывалого масштаба с развитой инфраструктурой</p>
+          </li>
+        </ul>
+      </section>
+      <section class="selection">
+        <h2 class="visually-hidden">Выбор квартиры</h2>
+        <div class="selection__slider slider">
+          <button class="slider__button slider__button--prev"></button>
+          <button class="slider__button slider__button--next"></button>
+        </div>
+        <p class="selection__text">Стильная архитектура и виды из окон будущей квартиры не оставят равнодушных</p>
+        <a class="selection__link selection__link--selection" href="#">Выбрать квартиру</a>
+        <a class="selection__link selection__link--buy" href="#">Купить квартиру онлайн</a>
+      </section>
+      <section class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/live"
+              aria-label="Ссылка на Фэйсбук Live devepoment">
+              <svg class="social__picture" width="10" height="20">
+                <use xlink:href="img/sprite.svg#facebook"></use>
+              </svg>
             </a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Ипотека
+          <li class="social__item">
+            <a class="social__link social__link--insta" href="https://www.instagram.com/live"
+              aria-label="Ссылка на Instagram Live devepoment">
+              <svg class="social-picture" width="20" height="20">
+                <use xlink:href="img/sprite.svg#insta"></use>
+              </svg>
             </a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Коммерция
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://www.twitter.com/live"
+              aria-label="Ссылка на Twitter Live devepoment">
+              <svg class="social__picture" width="21" height="17">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
             </a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Управляющая компания
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="https://www.vkontakte.com/live"
+              aria-label="Ссылка на Вконтакте Live devepoment">
+              <svg class="social__picture" width="19" height="11">
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
             </a>
           </li>
         </ul>
-        <button class="toggle toggle--closed" type="button" aria-label="Переключение меню"></button>
-      </nav>
+      </section>
     </div>
-    </div>
-  </div>
-    </header>
-    <main>
-      <h1>hi</h1>
     </main>
   </div>
 </body>

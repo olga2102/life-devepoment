@@ -1,0 +1,11 @@
+.bank {
+  position: absolute;
+  top: 20%;
+  left: -0.5%;
+
+  @media (max-width: $mobile-width) {
+    top: 60%;
+    right: -140px;
+    left: auto;
+  }
+}

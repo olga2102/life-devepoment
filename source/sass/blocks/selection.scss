@@ -1,0 +1,88 @@
+.selection {
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.selection__text {
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: -0.02em;
+  margin: 0 0 60px;
+
+  @media (max-width: $mobile-width) {
+    font-size: 26px;
+    line-height: 31px;
+    margin: 0 0 32px;
+  }
+}
+
+.selection__link {
+  color: $basic-white;
+  position: relative;
+
+  @media (max-width: $mobile-width) {
+    font-size: 12px;
+    margin: 0 0 30px;
+  }
+
+  &--selection {
+    padding: 20px 23px 17px 50px;
+    border: 1px solid $basic-white;
+    border-radius: 7px;
+
+    @media (max-width: $mobile-width) {
+      padding: 9px 15px 9px 37px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 11px;
+      height: 1px;
+      top: 50%;
+      left: 20px;
+      background-color: $basic-white;
+
+      @media (max-width: $mobile-width) {
+        width: 8px;
+        left: 15px;
+      }
+    }
+
+    &::before {
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    &::after {
+      transform: translateY(-50%);
+    }
+  }
+
+  &--buy {
+    @media (max-width: $mobile-width) {
+      line-height: 12px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-left: 1px solid $basic-white;
+      border-bottom: 1px solid $basic-white;
+      transform: translateY(-50%) rotate(-135deg);
+      top: 50%;
+      right: -15px;
+
+      @media (max-width: $mobile-width) {
+        width: 5px;
+        height: 5px;
+        right: -10px;
+      }
+    }
+  }
+}

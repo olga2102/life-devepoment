@@ -1,0 +1,36 @@
+.slider {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.slider__button {
+  @include button-reset;
+  position: relative;
+  width: 39px;
+  height: 39px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-left: 1px solid $basic-white;
+    border-bottom: 1px solid $basic-white;
+    top: 50%;
+    right: 50%;
+  }
+
+  &--next::before {
+    transform: translate(50%, -50%) rotate(-135deg);
+  }
+
+  &--prev::before {
+    transform: translate(50%, -50%) rotate(45deg);
+  }
+
+  &:hover {
+    border: 1px solid $basic-white;
+    border-radius: 50%;
+  }
+}

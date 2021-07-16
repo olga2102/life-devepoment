@@ -1,0 +1,32 @@
+.description__list {
+  @include list-reset;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.description__item {
+  display: none;
+  max-width: 373px;
+
+  &--current {
+    display: inline-flex;
+    flex-direction: column;
+  }
+}
+
+.description__img {
+  margin-bottom: 17px;
+}
+
+.description__title {
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 0 9px;
+}
+
+.description__text {
+  color: $opacity-white;
+  margin: 0 0 9px;
+}

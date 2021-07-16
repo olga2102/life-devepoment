@@ -2,6 +2,8 @@
   font-family: "Core Sans C", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
   color: $basic-white;
   min-width: 320px;
   min-height: 100vh;
@@ -15,11 +17,13 @@
 }
 
 .page__background {
+  position: relative;
   background-image: url("../img/people.jpg");
   width: 100%;
   min-height: 968px;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 
   @media (max-width: $mobile-width) {
     background-image: url("../img/skyscrapers.jpg");

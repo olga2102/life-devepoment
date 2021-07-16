@@ -1,0 +1,15 @@
+.social {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.social__list {
+  @include list-reset;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
