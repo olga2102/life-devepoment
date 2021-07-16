@@ -1,0 +1,155 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 35px 0;
+}
+
+.form__fieldset {
+  border: none;
+}
+
+.form__legend {
+  font-size: 13px;
+  line-height: 13px;
+  margin: 0 0 14px;
+}
+
+.form__text {
+  line-height: 16px;
+  margin: 0;
+}
+
+.form__span {
+  color: $opacity-white-strong;
+}
+
+.form__inner {
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 270px;
+  height: 56px;
+  background-color: $white-background;
+  border-radius: 7px;
+  padding: 18px 48px 18px 15px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 56px;
+    background-color: $basic-white;
+    opacity: 0.3;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+  }
+}
+
+.form__range {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 30px;
+}
+
+.form__select {
+  position: relative;
+  display: block;
+  width: 270px;
+  background-color: $white-background;
+  border: none;
+  border-radius: 7px;
+  padding: 20px 14px;
+  color: $basic-white;
+  appearance: none;
+}
+
+.form__select option {
+  color: $dark-font;
+}
+
+.form__label--select {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-left: 1px solid $basic-white;
+    border-bottom: 1px solid $basic-white;
+    top: 25px;
+    right: -250px;
+    transform: translate(50%, -50%) rotate(-45deg);
+  }
+}
+
+.form__button {
+  @include button-reset;
+  position: relative;
+  font-size: 13px;
+  line-height: 130.3%;
+  text-align: start;
+  color: $basic-white;
+  border: 1px solid $basic-white;
+  border-radius: 7px;
+  padding: 11px 12px 11px 57px;
+  margin-top: 30px;
+  margin-bottom: auto;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 16px;
+    background-image: url("../img/filter.svg");
+    top: 25%;
+    left: 16px;
+    transform: translate(0, 50%);
+  }
+}
+
+.form__link {
+  line-height: 16px;
+  color: $basic-white;
+  background-color: $red;
+  padding: 20px 31px;
+  border-radius: 7px;
+  margin-top: 30px;
+  margin-bottom: auto;
+}
+
+.form__checkbox {
+  width: 55px;
+  height: 55px;
+}
+
+.form__checkbox + .form__label::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: $white-background;
+}
+
+.form__checkbox + .form__label--one::before {
+  content: "1";
+  left: 23px;
+  top: 51px;
+}
+
+// .form-selection__radio:checked + .form-selection__label::after {
+//   content: "";
+//   position: absolute;
+//   left: 12px;
+//   top: 30%;
+//   width: 15px;
+//   height: 15px;
+//   background-color: $link-color;
+//   background-position: 50% 50%;
+//   border-radius: 50%;
+// }
