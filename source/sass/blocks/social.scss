@@ -1,4 +1,6 @@
 .social {
+  width: 23%;
+
   @media (max-width: $mobile-width) {
     display: none;
   }
@@ -6,10 +8,11 @@
 
 .social__list {
   @include list-reset;
+  margin-top: 195px;
 }
 
 .social__item {
   &:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }

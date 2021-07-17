@@ -1,9 +1,30 @@
-.types__list {
-  @include list-reset;
+.types {
+  position: relative;
+  width: 36%;
+  padding-top: 8px;
+  min-height: 494px;
 
   @media (max-width: $mobile-width) {
     display: none;
   }
+}
+
+.types__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 62%;
+  height: 145px;
+  margin-bottom: 18px;
+}
+
+.types__item {
+  margin-right: 10px;
+}
+
+.types__item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .types__link {
@@ -19,4 +40,15 @@
     left: 0;
     bottom: -2px;
   }
+
+  &:hover,
+  &:active {
+    color: $basic-white;
+  }
+}
+
+.types__slider {
+  position: absolute;
+  top: -0.1%;
+  right: -1%;
 }

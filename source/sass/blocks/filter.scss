@@ -14,10 +14,18 @@
   &::before {
     top: -1px;
     left: -40px;
+
+    @media (max-width: $mobile-width) {
+      left: -18px;
+    }
   }
 
   &::after {
     top: -1px;
     right: -40px;
+
+    @media (max-width: $mobile-width) {
+      right: -18px;
+    }
   }
 }

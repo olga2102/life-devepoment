@@ -32,3 +32,13 @@
     min-height: 615px;
   }
 }
+
+.page__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 140px;
+  }
+}

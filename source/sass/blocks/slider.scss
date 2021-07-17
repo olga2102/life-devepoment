@@ -21,6 +21,11 @@
     right: 50%;
   }
 
+  &--next {
+    border: 1px solid $white-border;
+    border-radius: 50%;
+  }
+
   &--next::before {
     transform: translate(50%, -50%) rotate(-135deg);
   }
@@ -32,5 +37,6 @@
   &:hover {
     border: 1px solid $basic-white;
     border-radius: 50%;
+    transition: all 1s ease;
   }
 }

@@ -1,8 +1,11 @@
 .selection {
+  width: 36%;
+
   @media (max-width: $mobile-width) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: auto;
   }
 }
 
@@ -10,7 +13,7 @@
   font-size: 40px;
   line-height: 47px;
   letter-spacing: -0.02em;
-  margin: 0 0 60px;
+  margin: 0 0 50px;
 
   @media (max-width: $mobile-width) {
     font-size: 26px;
@@ -19,9 +22,23 @@
   }
 }
 
+.selection__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .selection__link {
+  display: inline-block;
   color: $basic-white;
   position: relative;
+  margin-right: 20px;
+  margin-bottom: 20px;
 
   @media (max-width: $mobile-width) {
     font-size: 12px;
@@ -29,36 +46,21 @@
   }
 
   &--selection {
-    padding: 20px 23px 17px 50px;
+    width: 210px;
+    height: 56px;
+    position: relative;
     border: 1px solid $basic-white;
     border-radius: 7px;
 
     @media (max-width: $mobile-width) {
-      padding: 9px 15px 9px 37px;
+      width: 154px;
+      height: 40px;
     }
 
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      width: 11px;
-      height: 1px;
-      top: 50%;
-      left: 20px;
-      background-color: $basic-white;
-
-      @media (max-width: $mobile-width) {
-        width: 8px;
-        left: 15px;
-      }
-    }
-
-    &::before {
-      transform: translateY(-50%) rotate(90deg);
-    }
-
-    &::after {
-      transform: translateY(-50%);
+    &:hover {
+      border: 28px solid $basic-white;
+      color: $dark-font;
+      transition: all 0.5s ease;
     }
   }
 
@@ -85,4 +87,40 @@
       }
     }
   }
+}
+
+.selection__span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 11px;
+    height: 1px;
+    top: 50%;
+    left: -20px;
+    background-color: $basic-white;
+
+    @media (max-width: $mobile-width) {
+      width: 8px;
+      left: -15px;
+    }
+  }
+
+  &::before {
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  &::after {
+    transform: translateY(-50%);
+  }
+}
+
+.selection__link--selection:hover .selection__span::before,
+.selection__link--selection:hover .selection__span::after {
+  background-color: $dark-font;
 }
