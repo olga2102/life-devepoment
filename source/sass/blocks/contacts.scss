@@ -1,11 +1,3 @@
-.contacts__svg {
-  display: none;
-
-  @media (max-width: $mobile-width) {
-    display: block;
-  }
-}
-
 .contacts__number {
   display: inline-block;
   font-size: 20px;
