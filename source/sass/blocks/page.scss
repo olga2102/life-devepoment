@@ -25,11 +25,19 @@
   background-repeat: no-repeat;
   overflow-x: hidden;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/people@2x.jpg");
+  }
+
   @media (max-width: $mobile-width) {
     background-image: url("../img/skyscrapers.jpg");
     background-size: inherit;
     background-position-x: 40%;
     min-height: 615px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/skyscrapers@2x.jpg");
+    }
   }
 }
 

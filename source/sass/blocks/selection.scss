@@ -72,8 +72,8 @@
     &::after {
       position: absolute;
       content: "";
-      width: 7px;
-      height: 7px;
+      width: 8px;
+      height: 8px;
       border-left: 1px solid $basic-white;
       border-bottom: 1px solid $basic-white;
       transform: translateY(-50%) rotate(-135deg);
@@ -85,6 +85,16 @@
         height: 5px;
         right: -10px;
       }
+    }
+
+    &:hover {
+      border-bottom: 1px solid $dark-font;
+      color: $dark-font;
+    }
+
+    &:hover::after {
+      border-left: 1px solid $dark-font;
+      border-bottom: 1px solid $dark-font;
     }
   }
 }

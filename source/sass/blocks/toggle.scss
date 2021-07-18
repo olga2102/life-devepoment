@@ -2,7 +2,7 @@
   @include button-reset;
   position: relative;
   width: 48px;
-  height: 10px;
+  height: 30px;
 
   @media (max-width: $mobile-width) {
     width: 38px;
@@ -13,13 +13,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     &::after {
       content: "";
       width: 48px;
       height: 2px;
       position: absolute;
-      top: 50%;
+      top: 20%;
       right: 50%;
       transform: translate(50%, 50%);
       background-color: $basic-white;
@@ -27,11 +28,33 @@
 
       @media (max-width: $mobile-width) {
         width: 38px;
+        top: 50%;
       }
     }
   }
 
+  &:hover {
+    animation: bounce 1s;
+  }
+
   &:focus {
     outline: 2px solid  $basic-white;
+  }
+}
+
+@keyframes bounce {
+  10%,
+  20%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(-10px);
   }
 }

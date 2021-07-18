@@ -16,3 +16,16 @@
     margin-bottom: 25px;
   }
 }
+
+.social__picture {
+  fill: $basic-white;
+}
+
+.social__link {
+  transition: all 0.2s ease-in-out;
+}
+
+.social__link:hover .social__picture {
+  fill: $dark-font;
+  transform: scale(1.5);
+}

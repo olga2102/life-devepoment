@@ -1,29 +1,43 @@
-.range__scale {
+.range {
+  position: absolute;
   width: 180px;
   height: 3px;
   background-color: $red;
+}
 
-  &::before,
-  &::after {
+.range__switch {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  transform: translate(0, -50%);
+
+  &--one {
+    top: 0;
+    left: 0;
+  }
+
+  &--two {
+    top: 0;
+    right: 0;
+  }
+
+  &::before {
     position: absolute;
     content: "";
-    bottom: 0;
-    left: 30px;
     width: 21px;
     height: 21px;
     background-color: $red;
     border-radius: 50%;
-    top: 50%;
-    transform: translate(0, -50%);
+    cursor: pointer;
   }
 
-  &::before {
+  &--one::before {
+    top: 0;
     left: 0;
-    right: auto;
   }
 
-  &::after {
+  &--two::before {
+    top: 0;
     right: 0;
-    left: auto;
   }
 }
