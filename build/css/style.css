@@ -119,19 +119,13 @@ img {
       width: auto;
       margin-left: auto; } }
 
-.header__phone {
-  display: none; }
-  @media (max-width: 977px) {
-    .header__phone {
-      display: block;
-      fill: transparent;
-      stroke: white; } }
-
 .contacts__svg {
   display: none; }
   @media (max-width: 977px) {
     .contacts__svg {
-      display: block; } }
+      display: block;
+      fill: transparent;
+      stroke: white; } }
 
 .contacts__number {
   display: inline-block;

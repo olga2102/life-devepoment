@@ -37,13 +37,3 @@
     margin-left: auto;
   }
 }
-
-.header__phone {
-  display: none;
-
-  @media (max-width: $mobile-width) {
-    display: block;
-    fill: transparent;
-    stroke: $basic-white;
-  }
-}
